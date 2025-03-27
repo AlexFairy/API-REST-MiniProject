@@ -412,7 +412,7 @@ def userinput_CLI():
                     except Exception as e:
                         print(f"Error adding product: {e}")
 
-                elif product_choice == "2":  # Update Product
+                elif product_choice == "2": 
                     product_id = int(input("Enter product ID to update: "))
                     product = productcatalog.query.get(product_id)
                     if product:
@@ -442,7 +442,7 @@ def userinput_CLI():
                     else:
                         print("Product not found.")
 
-                elif product_choice == "3":  # List Products
+                elif product_choice == "3":
                     products = productcatalog.query.all()
                     print("\nAvailable Products:")
                     for product in products:
@@ -523,7 +523,6 @@ def userinput_CLI():
         elif choice == "5":
             print("Goodbye!")
             break
-
 
 if __name__ == '__main__':
     mode = input("Enter mode ('server' or 'cli'): ").strip().lower()
