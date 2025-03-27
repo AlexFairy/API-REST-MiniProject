@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 project_app = Flask(__name__)
-project_app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:Bebop1216!@localhost/commerce_react'
+project_app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost/commerce_react'
 db = SQLAlchemy(project_app)
 
 class customeraccount(db.Model):
